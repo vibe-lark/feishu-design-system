@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design System Preview: Feishu / Semi Design (Light)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Semantic Colors - Light */
+    --semi-color-primary: #0064FA;
+    --semi-color-primary-hover: #0055D6;
+    --semi-color-primary-active: #004ABB;
+    --semi-color-secondary: #0095EE;
+    --semi-color-tertiary: #6B7075;
+    --semi-color-success: #3BB346;
+    --semi-color-warning: #FC8800;
+    --semi-color-danger: #F93920;
+    --semi-color-info: #0064FA;
+
+    /* Backgrounds */
+    --semi-color-bg-0: #FFFFFF;
+    --semi-color-bg-1: #FFFFFF;
+    --semi-color-bg-2: #FFFFFF;
+    --semi-color-fill-0: rgba(46,50,56,0.05);
+    --semi-color-fill-1: rgba(46,50,56,0.09);
+    --semi-color-fill-2: rgba(46,50,56,0.13);
+
+    /* Text */
+    --semi-color-text-0: #1C1F23;
+    --semi-color-text-1: rgba(28,31,35,0.8);
+    --semi-color-text-2: rgba(28,31,35,0.62);
+    --semi-color-text-3: rgba(28,31,35,0.35);
+
+    /* Border */
+    --semi-color-border: rgba(28,31,35,0.08);
+
+    /* Disabled */
+    --semi-color-disabled-bg: #E6E8EA;
+    --semi-color-disabled-text: rgba(28,31,35,0.35);
+
+    /* AI */
+    --semi-color-ai-purple: rgba(166,71,255,1);
+    --semi-color-ai-general: linear-gradient(135deg, #0064FA, #A647FF, #FF6B9D);
+
+    /* Elevation */
+    --semi-shadow-elevated: 0 0 1px rgba(0,0,0,0.3), 0 4px 14px rgba(0,0,0,0.1);
+
+    /* Radius */
+    --semi-border-radius-small: 3px;
+    --semi-border-radius-medium: 6px;
+    --semi-border-radius-large: 12px;
+
+    /* Font */
+    --semi-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--semi-color-bg-0);
+    color: var(--semi-color-text-0);
+    font-family: var(--semi-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* NAV */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 32px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--semi-color-border);
+  }
+  .nav-brand {
+    font-size: 16px; font-weight: 600; color: var(--semi-color-text-0);
+    text-decoration: none; display: flex; align-items: center; gap: 8px;
+  }
+  .nav-brand-icon {
+    width: 24px; height: 24px; background: var(--semi-color-primary);
+    border-radius: var(--semi-border-radius-small); display: flex;
+    align-items: center; justify-content: center; color: white;
+    font-size: 12px; font-weight: 700;
+  }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a {
+    font-size: 14px; font-weight: 400; color: var(--semi-color-text-1);
+    text-decoration: none; transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--semi-color-text-0); }
+  .nav-cta {
+    display: inline-block; background: var(--semi-color-primary); color: #fff;
+    padding: 6px 16px; border-radius: var(--semi-border-radius-small);
+    font-size: 14px; font-weight: 400; text-decoration: none;
+    transition: background 0.15s;
+  }
+  .nav-cta:hover { background: var(--semi-color-primary-hover); }
+
+  /* HERO */
+  .hero { padding: 80px 32px 64px; text-align: center; }
+  .hero h1 {
+    font-size: 32px; font-weight: 600; line-height: 44px;
+    color: var(--semi-color-text-0); margin-bottom: 12px;
+  }
+  .hero p {
+    font-size: 14px; font-weight: 400; line-height: 22px;
+    color: var(--semi-color-text-1); max-width: 560px; margin: 0 auto 24px;
+  }
+  .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block; background: var(--semi-color-primary); color: #fff;
+    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
+    font-family: var(--semi-font); font-size: 14px; font-weight: 400;
+    text-decoration: none; cursor: pointer; transition: background 0.15s;
+  }
+  .btn-primary:hover { background: var(--semi-color-primary-hover); }
+  .btn-tertiary {
+    display: inline-block; background: transparent; color: var(--semi-color-text-0);
+    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
+    font-family: var(--semi-font); font-size: 14px; font-weight: 400;
+    text-decoration: none; cursor: pointer; transition: background 0.15s;
+  }
+  .btn-tertiary:hover { background: var(--semi-color-fill-0); }
+
+  /* SECTIONS */
+  .section { padding: 48px 32px; max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    font-size: 12px; font-weight: 600; color: var(--semi-color-text-2);
+    text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px;
+  }
+  .section-title {
+    font-size: 24px; font-weight: 600; line-height: 32px; margin-bottom: 24px;
+  }
+  .section-divider { border: none; border-top: 1px solid var(--semi-color-border); margin: 0; }
+
+  /* COLORS */
+  .color-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 12px; margin-bottom: 20px;
+  }
+  .color-swatch {
+    border-radius: var(--semi-border-radius-large); overflow: hidden;
+    border: 1px solid var(--semi-color-border);
+  }
+  .color-swatch-block { height: 72px; width: 100%; }
+  .color-swatch-info { padding: 10px 12px; }
+  .color-swatch-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  .color-swatch-hex { font-size: 12px; color: var(--semi-color-text-2); font-family: monospace; }
+  .color-swatch-role { font-size: 11px; color: var(--semi-color-text-2); margin-top: 3px; }
+  .color-group-label {
+    font-size: 14px; font-weight: 600; color: var(--semi-color-text-1);
+    margin: 20px 0 10px;
+  }
+
+  /* TYPOGRAPHY */
+  .type-sample {
+    margin-bottom: 24px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--semi-color-border);
+  }
+  .type-sample:last-child { border-bottom: none; }
+  .type-meta {
+    font-size: 12px; font-weight: 400; color: var(--semi-color-text-2);
+    margin-top: 8px; font-family: monospace;
+  }
+
+  /* BUTTONS */
+  .button-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .button-item { text-align: center; }
+  .button-label { font-size: 12px; font-weight: 400; color: var(--semi-color-text-2); margin-top: 8px; }
+
+  .btn-secondary {
+    display: inline-block; background: var(--semi-color-secondary); color: #fff;
+    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
+    font-family: var(--semi-font); font-size: 14px; font-weight: 400;
+    text-decoration: none; cursor: pointer;
+  }
+  .btn-danger {
+    display: inline-block; background: var(--semi-color-danger); color: #fff;
+    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
+    font-family: var(--semi-font); font-size: 14px; font-weight: 400;
+    text-decoration: none; cursor: pointer;
+  }
+  .btn-warning {
+    display: inline-block; background: var(--semi-color-warning); color: #fff;
+    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
+    font-family: var(--semi-font); font-size: 14px; font-weight: 400;
+    text-decoration: none; cursor: pointer;
+  }
+  .btn-disabled {
+    display: inline-block; background: var(--semi-color-disabled-bg);
+    color: var(--semi-color-disabled-text);
+    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
+    font-family: var(--semi-font); font-size: 14px; font-weight: 400;
+    cursor: not-allowed;
+  }
+  .tag {
+    display: inline-block; padding: 2px 8px;
+    border-radius: var(--semi-border-radius-small);
+    font-size: 12px; font-weight: 400;
+  }
+  .tag-primary { background: rgba(0,100,250,0.1); color: var(--semi-color-primary); }
+  .tag-success { background: rgba(59,179,70,0.1); color: var(--semi-color-success); }
+  .tag-warning { background: rgba(252,136,0,0.1); color: var(--semi-color-warning); }
+  .tag-danger { background: rgba(249,57,32,0.1); color: var(--semi-color-danger); }
+
+  /* CARDS */
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;
+  }
+  .card {
+    background: var(--semi-color-bg-1);
+    border-radius: var(--semi-border-radius-large);
+    padding: 20px;
+    border: 1px solid var(--semi-color-border);
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: rgba(28,31,35,0.2); }
+  .card h3 { font-size: 18px; font-weight: 600; line-height: 24px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--semi-color-text-1); line-height: 20px; }
+  .card-badge {
+    display: inline-block; font-size: 12px; font-weight: 400;
+    padding: 2px 8px; border-radius: var(--semi-border-radius-small);
+    margin-bottom: 12px;
+  }
+
+  /* FORMS */
+  .form-group { margin-bottom: 16px; max-width: 400px; }
+  .form-label {
+    display: block; font-size: 14px; font-weight: 400;
+    color: var(--semi-color-text-0); margin-bottom: 4px;
+  }
+  .form-input {
+    width: 100%; height: 32px; background: var(--semi-color-fill-0);
+    color: var(--semi-color-text-0); border: 1px solid transparent;
+    padding: 0 12px; border-radius: var(--semi-border-radius-small);
+    font-family: var(--semi-font); font-size: 14px; outline: none;
+    transition: all 0.15s;
+  }
+  .form-input:hover { background: var(--semi-color-fill-1); }
+  .form-input:focus {
+    background: var(--semi-color-fill-0);
+    border-color: var(--semi-color-primary);
+  }
+  .form-input--focus {
+    background: var(--semi-color-fill-0);
+    border-color: var(--semi-color-primary);
+  }
+  .form-input--error {
+    background: var(--semi-color-fill-0);
+    border-color: var(--semi-color-danger);
+  }
+  .form-input--disabled {
+    background: var(--semi-color-disabled-bg);
+    color: var(--semi-color-disabled-text);
+    cursor: not-allowed;
+  }
+  .form-textarea {
+    width: 100%; min-height: 80px; background: var(--semi-color-fill-0);
+    color: var(--semi-color-text-0); border: 1px solid transparent;
+    padding: 8px 12px; border-radius: var(--semi-border-radius-small);
+    font-family: var(--semi-font); font-size: 14px; resize: vertical; outline: none;
+  }
+  .form-state-label { font-size: 11px; color: var(--semi-color-text-2); margin-top: 4px; }
+  .required-star { color: var(--semi-color-danger); margin-right: 4px; }
+
+  /* TABS */
+  .tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--semi-color-border); margin-bottom: 24px; }
+  .tab-item {
+    padding: 8px 0; font-size: 14px; font-weight: 400;
+    color: var(--semi-color-text-2); cursor: pointer;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    transition: all 0.15s;
+  }
+  .tab-item:hover { color: var(--semi-color-text-0); }
+  .tab-item.active {
+    color: var(--semi-color-primary);
+    border-bottom-color: var(--semi-color-primary);
+    font-weight: 600;
+  }
+
+  /* TABLE */
+  .table-wrapper { overflow-x: auto; border-radius: var(--semi-border-radius-large); border: 1px solid var(--semi-color-border); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead th {
+    background: var(--semi-color-fill-0); text-align: left;
+    padding: 10px 16px; font-weight: 600; font-size: 12px;
+    color: var(--semi-color-text-2); border-bottom: 1px solid var(--semi-color-border);
+  }
+  tbody td {
+    padding: 10px 16px; border-bottom: 1px solid var(--semi-color-border);
+    color: var(--semi-color-text-0);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--semi-color-fill-0); }
+
+  /* SPACING */
+  .spacing-row { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+  .spacing-item { text-align: center; }
+  .spacing-block {
+    background: var(--semi-color-primary); border-radius: 2px;
+    margin-bottom: 6px; height: 24px;
+  }
+  .spacing-value { font-size: 11px; font-weight: 500; color: var(--semi-color-text-2); font-family: monospace; }
+
+  /* RADIUS */
+  .radius-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .radius-item { text-align: center; }
+  .radius-box {
+    width: 64px; height: 64px; background: var(--semi-color-primary);
+    margin-bottom: 6px;
+  }
+  .radius-label { font-size: 11px; font-weight: 500; color: var(--semi-color-text-2); font-family: monospace; }
+  .radius-context { font-size: 10px; color: var(--semi-color-text-2); }
+
+  /* ELEVATION */
+  .elevation-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+  }
+  .elevation-card {
+    background: var(--semi-color-bg-1); border-radius: var(--semi-border-radius-large);
+    padding: 20px; text-align: center;
+  }
+  .elevation-label { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .elevation-desc { font-size: 11px; color: var(--semi-color-text-2); font-family: monospace; }
+
+  /* AI SECTION */
+  .ai-gradient-bar {
+    height: 48px; border-radius: var(--semi-border-radius-large);
+    background: linear-gradient(135deg, #0064FA, #A647FF, #FF6B9D);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 600; font-size: 14px; margin-bottom: 12px;
+  }
+
+  /* AVATAR */
+  .avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 600; color: #fff;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 32px; text-align: center;
+    border-top: 1px solid var(--semi-color-border);
+    font-size: 12px; color: var(--semi-color-text-2);
+  }
+  .footer a { color: var(--semi-color-primary); text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 24px; line-height: 32px; }
+    .nav-links { display: none; }
+    .section { padding: 32px 20px; }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-brand" href="#">
+    <span class="nav-brand-icon">S</span>
+    Semi Design
+  </a>
+  <ul class="nav-links">
+    <li><a href="#colors">Colors</a></li>
+    <li><a href="#typography">Typography</a></li>
+    <li><a href="#buttons">Buttons</a></li>
+    <li><a href="#cards">Cards</a></li>
+    <li><a href="#forms">Forms</a></li>
+    <li><a href="#table">Table</a></li>
+    <li><a href="#spacing">Spacing</a></li>
+  </ul>
+  <a class="nav-cta" href="#">Get Started</a>
+</nav>
+
+<section class="hero">
+  <h1>Design System<br>Inspired by Feishu</h1>
+  <p>A design token catalog generated from DESIGN.md. Every color, font, component, spacing, and elevation value from Semi Design — visualized.</p>
+  <div class="hero-buttons">
+    <a class="btn-primary" href="#">Get Started</a>
+    <a class="btn-tertiary" href="#">Documentation</a>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- COLORS -->
+<section class="section" id="colors">
+  <div class="section-label">01 / Colors</div>
+  <h2 class="section-title">Color Palette</h2>
+
+  <div class="color-group-label">Semantic Colors</div>
+  <div class="color-grid">
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#0064FA"></div><div class="color-swatch-info"><div class="color-swatch-name">Primary</div><div class="color-swatch-hex">#0064FA</div><div class="color-swatch-role">CTAs, active states</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#0095EE"></div><div class="color-swatch-info"><div class="color-swatch-name">Secondary</div><div class="color-swatch-hex">#0095EE</div><div class="color-swatch-role">Supporting actions</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#6B7075"></div><div class="color-swatch-info"><div class="color-swatch-name">Tertiary</div><div class="color-swatch-hex">#6B7075</div><div class="color-swatch-role">Neutral icons</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#3BB346"></div><div class="color-swatch-info"><div class="color-swatch-name">Success</div><div class="color-swatch-hex">#3BB346</div><div class="color-swatch-role">Success messages</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#FC8800"></div><div class="color-swatch-info"><div class="color-swatch-name">Warning</div><div class="color-swatch-hex">#FC8800</div><div class="color-swatch-role">Warning states</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#F93920"></div><div class="color-swatch-info"><div class="color-swatch-name">Danger</div><div class="color-swatch-hex">#F93920</div><div class="color-swatch-role">Error, destructive</div></div></div>
+  </div>
+
+  <div class="color-group-label">Backgrounds & Surfaces</div>
+  <div class="color-grid">
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#FFFFFF; border-bottom: 1px solid rgba(28,31,35,0.08)"></div><div class="color-swatch-info"><div class="color-swatch-name">BG-0</div><div class="color-swatch-hex">#FFFFFF</div><div class="color-swatch-role">Page background</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#FFFFFF; border-bottom: 1px solid rgba(28,31,35,0.08)"></div><div class="color-swatch-info"><div class="color-swatch-name">BG-1</div><div class="color-swatch-hex">#FFFFFF</div><div class="color-swatch-role">Cards, containers</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#FFFFFF; border-bottom: 1px solid rgba(28,31,35,0.08)"></div><div class="color-swatch-info"><div class="color-swatch-name">BG-2</div><div class="color-swatch-hex">#FFFFFF</div><div class="color-swatch-role">Modals, popovers</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:rgba(46,50,56,0.05)"></div><div class="color-swatch-info"><div class="color-swatch-name">Fill-0</div><div class="color-swatch-hex">rgba(46,50,56,0.05)</div><div class="color-swatch-role">Input backgrounds</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:rgba(46,50,56,0.09)"></div><div class="color-swatch-info"><div class="color-swatch-name">Fill-1</div><div class="color-swatch-hex">rgba(46,50,56,0.09)</div><div class="color-swatch-role">Hover backgrounds</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:rgba(46,50,56,0.13)"></div><div class="color-swatch-info"><div class="color-swatch-name">Fill-2</div><div class="color-swatch-hex">rgba(46,50,56,0.13)</div><div class="color-swatch-role">Active backgrounds</div></div></div>
+  </div>
+
+  <div class="color-group-label">Text & Borders</div>
+  <div class="color-grid">
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#1C1F23"></div><div class="color-swatch-info"><div class="color-swatch-name">Text-0</div><div class="color-swatch-hex">#1C1F23</div><div class="color-swatch-role">Primary text</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:rgba(28,31,35,0.8)"></div><div class="color-swatch-info"><div class="color-swatch-name">Text-1</div><div class="color-swatch-hex">rgba(...,0.8)</div><div class="color-swatch-role">Secondary text</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:rgba(28,31,35,0.62)"></div><div class="color-swatch-info"><div class="color-swatch-name">Text-2</div><div class="color-swatch-hex">rgba(...,0.62)</div><div class="color-swatch-role">Tertiary text</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:rgba(28,31,35,0.35)"></div><div class="color-swatch-info"><div class="color-swatch-name">Text-3</div><div class="color-swatch-hex">rgba(...,0.35)</div><div class="color-swatch-role">Disabled text</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:rgba(28,31,35,0.08)"></div><div class="color-swatch-info"><div class="color-swatch-name">Border</div><div class="color-swatch-hex">rgba(...,0.08)</div><div class="color-swatch-role">Borders, dividers</div></div></div>
+    <div class="color-swatch"><div class="color-swatch-block" style="background:#E6E8EA"></div><div class="color-swatch-info"><div class="color-swatch-name">Disabled BG</div><div class="color-swatch-hex">#E6E8EA</div><div class="color-swatch-role">Disabled backgrounds</div></div></div>
+  </div>
+
+  <div class="color-group-label">AI Colors</div>
+  <div class="ai-gradient-bar">AI General Gradient (Blue → Purple → Pink)</div>
+  <div class="color-grid">
+    <div class="color-swatch"><div class="color-swatch-block" style="background:rgba(166,71,255,1)"></div><div class="color-swatch-info"><div class="color-swatch-name">AI Purple</div><div class="color-swatch-hex">rgba(166,71,255)</div><div class="color-swatch-role">AI accent</div></div></div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- TYPOGRAPHY -->
+<section class="section" id="typography">
+  <div class="section-label">02 / Typography</div>
+  <h2 class="section-title">Typography Scale</h2>
+
+  <div class="type-sample"><div style="font-size:32px; font-weight:600; line-height:44px;">Heading 1 — Page Title</div><div class="type-meta">H1 — 32px / 600 / 44px / Inter</div></div>
+  <div class="type-sample"><div style="font-size:28px; font-weight:600; line-height:40px;">Heading 2 — Section Title</div><div class="type-meta">H2 — 28px / 600 / 40px / Inter</div></div>
+  <div class="type-sample"><div style="font-size:24px; font-weight:600; line-height:32px;">Heading 3 — Sub-section</div><div class="type-meta">H3 — 24px / 600 / 32px / Inter</div></div>
+  <div class="type-sample"><div style="font-size:20px; font-weight:600; line-height:28px;">Heading 4 — Card Title</div><div class="type-meta">H4 — 20px / 600 / 28px / Inter</div></div>
+  <div class="type-sample"><div style="font-size:18px; font-weight:600; line-height:24px;">Heading 5 — Sub-heading</div><div class="type-meta">H5 — 18px / 600 / 24px / Inter</div></div>
+  <div class="type-sample"><div style="font-size:16px; font-weight:600; line-height:22px;">Heading 6 — Small Heading</div><div class="type-meta">H6 — 16px / 600 / 22px / Inter</div></div>
+  <div class="type-sample"><div style="font-size:14px; font-weight:400; line-height:20px;">Body text — Semi Design provides a modern, comprehensive, and flexible design system for enterprise-level applications. Build efficient, professional interfaces with 80+ components.</div><div class="type-meta">Body — 14px / 400 / 20px / Inter</div></div>
+  <div class="type-sample"><div style="font-size:12px; font-weight:400; line-height:16px; color: var(--semi-color-text-1);">Body Small — Labels, secondary text, captions, and metadata</div><div class="type-meta">Body Small — 12px / 400 / 16px / Inter</div></div>
+</section>
+
+<hr class="section-divider">
+
+<!-- BUTTONS -->
+<section class="section" id="buttons">
+  <div class="section-label">03 / Buttons & Tags</div>
+  <h2 class="section-title">Button Variants</h2>
+  <div class="button-row" style="margin-bottom: 24px;">
+    <div class="button-item"><a class="btn-primary" href="#">Primary</a><div class="button-label">Primary</div></div>
+    <div class="button-item"><a class="btn-secondary" href="#">Secondary</a><div class="button-label">Secondary</div></div>
+    <div class="button-item"><a class="btn-tertiary" href="#">Tertiary</a><div class="button-label">Tertiary</div></div>
+    <div class="button-item"><a class="btn-danger" href="#">Danger</a><div class="button-label">Danger</div></div>
+    <div class="button-item"><a class="btn-warning" href="#">Warning</a><div class="button-label">Warning</div></div>
+    <div class="button-item"><span class="btn-disabled">Disabled</span><div class="button-label">Disabled</div></div>
+  </div>
+
+  <h3 style="font-size:16px; font-weight:600; margin-bottom:12px;">Tags</h3>
+  <div class="button-row">
+    <div class="button-item"><span class="tag tag-primary">Primary</span><div class="button-label">Primary Tag</div></div>
+    <div class="button-item"><span class="tag tag-success">Success</span><div class="button-label">Success Tag</div></div>
+    <div class="button-item"><span class="tag tag-warning">Warning</span><div class="button-label">Warning Tag</div></div>
+    <div class="button-item"><span class="tag tag-danger">Danger</span><div class="button-label">Danger Tag</div></div>
+  </div>
+
+  <h3 style="font-size:16px; font-weight:600; margin: 24px 0 12px;">Avatars</h3>
+  <div class="button-row">
+    <div class="button-item"><span class="avatar" style="background:var(--semi-color-primary);">A</span><div class="button-label">Avatar</div></div>
+    <div class="button-item"><span class="avatar" style="background:var(--semi-color-success);">B</span><div class="button-label">Avatar</div></div>
+    <div class="button-item"><span class="avatar" style="background:var(--semi-color-warning);">C</span><div class="button-label">Avatar</div></div>
+    <div class="button-item"><span class="avatar" style="background:var(--semi-color-danger);">D</span><div class="button-label">Avatar</div></div>
+    <div class="button-item"><span class="avatar" style="background:var(--semi-color-ai-purple);">AI</span><div class="button-label">AI Avatar</div></div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- CARDS -->
+<section class="section" id="cards">
+  <div class="section-label">04 / Cards</div>
+  <h2 class="section-title">Card Examples</h2>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-badge tag-primary" style="background:rgba(0,100,250,0.1); color:var(--semi-color-primary);">Component</div>
+      <h3>80+ Components</h3>
+      <p>Up to 80+ high-quality components with stable updates since 2019. Covers inputs, navigation, data display, and feedback.</p>
+    </div>
+    <div class="card">
+      <div class="card-badge" style="background:rgba(59,179,70,0.1); color:var(--semi-color-success);">Design</div>
+      <h3>3000+ Design Tokens</h3>
+      <p>Fully customizable via Semi DSM. Define your own design system with one click. Sync between Figma and Code.</p>
+    </div>
+    <div class="card">
+      <div class="card-badge" style="background:rgba(166,71,255,0.1); color:var(--semi-color-ai-purple);">AI</div>
+      <h3>AI-Friendly Built-in</h3>
+      <p>Dedicated AI components and color tokens for AI-powered features. Design to Code in one click via Figma plugin.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- TABS -->
+<section class="section" id="tabs-demo">
+  <div class="section-label">05 / Tabs</div>
+  <h2 class="section-title">Tab Navigation</h2>
+  <div class="tabs">
+    <div class="tab-item active">Overview</div>
+    <div class="tab-item">Components</div>
+    <div class="tab-item">Design Tokens</div>
+    <div class="tab-item">Changelog</div>
+  </div>
+  <p style="color: var(--semi-color-text-1);">Line-style tabs with 2px bottom border in primary blue for active state. Inactive tabs use tertiary text color.</p>
+</section>
+
+<hr class="section-divider">
+
+<!-- FORMS -->
+<section class="section" id="forms">
+  <div class="section-label">06 / Forms</div>
+  <h2 class="section-title">Form Elements</h2>
+  <div class="form-group">
+    <label class="form-label"><span class="required-star">*</span>Project Name</label>
+    <input class="form-input" type="text" placeholder="Enter project name">
+    <div class="form-state-label">Default (filled background, no border)</div>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Repository</label>
+    <input class="form-input form-input--focus" type="text" value="semi-design/components">
+    <div class="form-state-label">Focus (primary blue border)</div>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Domain</label>
+    <input class="form-input form-input--error" type="text" value="invalid value">
+    <div class="form-state-label">Error (danger red border)</div>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Disabled Field</label>
+    <input class="form-input form-input--disabled" type="text" value="Cannot edit" disabled>
+    <div class="form-state-label">Disabled (gray background, not-allowed cursor)</div>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Description</label>
+    <textarea class="form-textarea" placeholder="Enter description..."></textarea>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- TABLE -->
+<section class="section" id="table">
+  <div class="section-label">07 / Table</div>
+  <h2 class="section-title">Data Table</h2>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Size</th>
+          <th>Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>semi-ui</td>
+          <td><span class="tag tag-success">Active</span></td>
+          <td>2.4 MB</td>
+          <td style="color: var(--semi-color-text-1);">2026-04-01</td>
+        </tr>
+        <tr>
+          <td>semi-icons</td>
+          <td><span class="tag tag-success">Active</span></td>
+          <td>640 KB</td>
+          <td style="color: var(--semi-color-text-1);">2026-03-28</td>
+        </tr>
+        <tr>
+          <td>semi-theme-default</td>
+          <td><span class="tag tag-primary">Stable</span></td>
+          <td>128 KB</td>
+          <td style="color: var(--semi-color-text-1);">2026-03-15</td>
+        </tr>
+        <tr>
+          <td>semi-foundation</td>
+          <td><span class="tag tag-warning">Beta</span></td>
+          <td>1.1 MB</td>
+          <td style="color: var(--semi-color-text-1);">2026-04-05</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- SPACING -->
+<section class="section" id="spacing">
+  <div class="section-label">08 / Spacing</div>
+  <h2 class="section-title">Spacing Scale (4px base)</h2>
+  <div class="spacing-row">
+    <div class="spacing-item"><div class="spacing-block" style="width:4px"></div><div class="spacing-value">4</div></div>
+    <div class="spacing-item"><div class="spacing-block" style="width:8px"></div><div class="spacing-value">8</div></div>
+    <div class="spacing-item"><div class="spacing-block" style="width:12px"></div><div class="spacing-value">12</div></div>
+    <div class="spacing-item"><div class="spacing-block" style="width:16px"></div><div class="spacing-value">16</div></div>
+    <div class="spacing-item"><div class="spacing-block" style="width:24px"></div><div class="spacing-value">24</div></div>
+    <div class="spacing-item"><div class="spacing-block" style="width:32px"></div><div class="spacing-value">32</div></div>
+    <div class="spacing-item"><div class="spacing-block" style="width:48px"></div><div class="spacing-value">48</div></div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- RADIUS -->
+<section class="section" id="radius">
+  <div class="section-label">09 / Radius</div>
+  <h2 class="section-title">Border Radius Scale</h2>
+  <div class="radius-row">
+    <div class="radius-item"><div class="radius-box" style="border-radius:3px"></div><div class="radius-label">3px</div><div class="radius-context">Buttons, Inputs</div></div>
+    <div class="radius-item"><div class="radius-box" style="border-radius:6px"></div><div class="radius-label">6px</div><div class="radius-context">Dropdowns</div></div>
+    <div class="radius-item"><div class="radius-box" style="border-radius:12px"></div><div class="radius-label">12px</div><div class="radius-context">Cards, Modals</div></div>
+    <div class="radius-item"><div class="radius-box" style="border-radius:50%"></div><div class="radius-label">50%</div><div class="radius-context">Avatars</div></div>
+    <div class="radius-item"><div class="radius-box" style="border-radius:9999px"></div><div class="radius-label">9999px</div><div class="radius-context">Pill shapes</div></div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ELEVATION -->
+<section class="section" id="elevation">
+  <div class="section-label">10 / Elevation</div>
+  <h2 class="section-title">Elevation & Depth</h2>
+  <div class="elevation-grid">
+    <div class="elevation-card" style="border: 1px solid var(--semi-color-border);">
+      <div class="elevation-label">Level 0: Flat</div>
+      <div class="elevation-desc">1px border, no shadow</div>
+    </div>
+    <div class="elevation-card" style="box-shadow: var(--semi-shadow-elevated);">
+      <div class="elevation-label">Level 1: Elevated</div>
+      <div class="elevation-desc">Modals, popovers, toasts</div>
+    </div>
+    <div class="elevation-card" style="box-shadow: 0 0 0 2px var(--semi-color-primary);">
+      <div class="elevation-label">Focus Ring</div>
+      <div class="elevation-desc">Input focus state</div>
+    </div>
+    <div class="elevation-card" style="box-shadow: 0 0 0 2px var(--semi-color-danger);">
+      <div class="elevation-label">Error Ring</div>
+      <div class="elevation-desc">Input error state</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  Generated from <a href="https://semi.design/">semi.design</a> DESIGN.md — Feishu Design System Reference
+</footer>
+
+</body>
+</html>
