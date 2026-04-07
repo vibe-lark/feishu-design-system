@@ -1,6 +1,6 @@
-# 飞书风格设计系统参考
+# Lark / Universe Design 风格设计系统参考
 
-这是一个面向 AI 生成界面的设计系统参考仓库，目标是提供一份接近飞书 / Semi Design 视觉语言的 `DESIGN.md`，方便在 Cursor、Claude、Codex、Stitch 等工具中直接复用。
+这是一个面向 AI 生成界面的设计系统参考仓库，目标是提供一份接近 Lark / Universe Design 视觉语言的 `DESIGN.md`，方便在 Cursor、Claude、Codex、Stitch 等工具中直接复用。
 
 默认文档语言为中文，便于中文场景下直接引用、复制和二次改写。
 
@@ -20,7 +20,7 @@
 将 `DESIGN.md` 放到你的项目根目录，或者把其中内容直接作为提示词上下文交给 AI。
 
 ```txt
-请基于 DESIGN.md 生成一个具有飞书风格的企业后台页面。
+请基于 DESIGN.md 生成一个具有 Lark / Universe Design 风格的企业后台页面。
 要求遵循其中的颜色、字体、圆角、表单和卡片规范。
 ```
 
@@ -30,7 +30,7 @@
 - 适合中英文混排的企业级界面风格
 - 表单、卡片、表格等后台高频组件风格明确
 - 强调清晰的信息层级、克制的圆角和高可读性
-- 适合作为 AI 生成飞书风格页面时的统一参考
+- 适合作为 AI 生成 Lark / Universe Design 风格页面时的统一参考
 
 ## 参考来源
 
