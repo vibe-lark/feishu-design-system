@@ -3,66 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Design System Preview: Feishu / Semi Design (Dark)</title>
+<title>Design System Preview: Lark / Universe Design (Dark)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     /* Semantic Colors - Dark */
-    --semi-color-primary: #54A9FF;
-    --semi-color-primary-hover: #6DB8FF;
-    --semi-color-primary-active: #3D9BFF;
-    --semi-color-secondary: #40B4F3;
-    --semi-color-tertiary: #888D92;
-    --semi-color-success: #5DC264;
-    --semi-color-warning: #FFAE43;
-    --semi-color-danger: #FC725A;
-    --semi-color-info: #54A9FF;
+    --ud-color-brand-b500: #54A9FF;
+    --ud-color-brand-b600: #6DB8FF;
+    --ud-color-brand-b700: #3D9BFF;
+    --ud-color-secondary: #40B4F3;
+    --ud-color-tertiary: #888D92;
+    --ud-color-success: #5DC264;
+    --ud-color-warning: #FFAE43;
+    --ud-color-danger: #FC725A;
+    --ud-color-info: #54A9FF;
 
     /* Backgrounds */
-    --semi-color-bg-0: #16161A;
-    --semi-color-bg-1: #232429;
-    --semi-color-bg-2: #35363C;
-    --semi-color-fill-0: rgba(255,255,255,0.12);
-    --semi-color-fill-1: rgba(255,255,255,0.16);
-    --semi-color-fill-2: rgba(255,255,255,0.20);
+    --ud-color-bg-body: #16161A;
+    --ud-color-bg-base: #232429;
+    --ud-color-bg-float: #35363C;
+    --ud-color-fill-transparent: rgba(255,255,255,0.12);
+    --ud-color-fill-hover: rgba(255,255,255,0.16);
+    --ud-color-fill-active: rgba(255,255,255,0.20);
 
     /* Text */
-    --semi-color-text-0: #F9F9F9;
-    --semi-color-text-1: rgba(249,249,249,0.8);
-    --semi-color-text-2: rgba(249,249,249,0.6);
-    --semi-color-text-3: rgba(249,249,249,0.35);
+    --ud-text-color-primary: #F9F9F9;
+    --ud-text-color-secondary: rgba(249,249,249,0.8);
+    --ud-text-color-tertiary: rgba(249,249,249,0.6);
+    --ud-text-color-disabled: rgba(249,249,249,0.35);
 
     /* Border */
-    --semi-color-border: rgba(255,255,255,0.08);
+    --ud-color-line-border: rgba(255,255,255,0.08);
 
     /* Disabled */
-    --semi-color-disabled-bg: #2E3238;
-    --semi-color-disabled-text: rgba(249,249,249,0.35);
+    --ud-color-disabled-bg: #2E3238;
 
     /* AI */
-    --semi-color-ai-purple: rgba(195,117,255,1);
-    --semi-color-ai-general: linear-gradient(135deg, #54A9FF, #C375FF, #FF8EB3);
+    --ud-color-ai-primary: rgba(195,117,255,1);
+    --ud-color-ai-general: linear-gradient(135deg, #54A9FF, #C375FF, #FF8EB3);
 
     /* Elevation */
-    --semi-shadow-elevated: inset 0 0 0 1px rgba(255,255,255,0.1), 0 4px 14px rgba(0,0,0,0.25);
+    --ud-shadow-elevated: inset 0 0 0 1px rgba(255,255,255,0.1), 0 4px 14px rgba(0,0,0,0.25);
 
     /* Radius */
-    --semi-border-radius-small: 3px;
-    --semi-border-radius-medium: 6px;
-    --semi-border-radius-large: 12px;
+    --ud-border-radius-small: 3px;
+    --ud-border-radius-medium: 6px;
+    --ud-border-radius-large: 12px;
 
     /* Font */
-    --semi-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --ud-font: LarkHackSafariFont, LarkEmojiFont, -apple-system, BlinkMacSystemFont, Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: var(--semi-color-bg-0);
-    color: var(--semi-color-text-0);
-    font-family: var(--semi-font);
+    background: var(--ud-color-bg-body);
+    color: var(--ud-text-color-primary);
+    font-family: var(--ud-font);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -77,74 +76,74 @@
     padding: 12px 32px;
     background: rgba(22,22,26,0.92);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--semi-color-border);
+    border-bottom: 1px solid var(--ud-color-line-border);
   }
   .nav-brand {
-    font-size: 16px; font-weight: 600; color: var(--semi-color-text-0);
+    font-size: 16px; font-weight: 600; color: var(--ud-text-color-primary);
     text-decoration: none; display: flex; align-items: center; gap: 8px;
   }
   .nav-brand-icon {
-    width: 24px; height: 24px; background: var(--semi-color-primary);
-    border-radius: var(--semi-border-radius-small); display: flex;
+    width: 24px; height: 24px; background: var(--ud-color-brand-b500);
+    border-radius: var(--ud-border-radius-small); display: flex;
     align-items: center; justify-content: center; color: #16161A;
     font-size: 12px; font-weight: 700;
   }
   .nav-links { display: flex; gap: 24px; list-style: none; }
   .nav-links a {
-    font-size: 14px; font-weight: 400; color: var(--semi-color-text-1);
+    font-size: 14px; font-weight: 400; color: var(--ud-text-color-secondary);
     text-decoration: none; transition: color 0.15s;
   }
-  .nav-links a:hover { color: var(--semi-color-text-0); }
+  .nav-links a:hover { color: var(--ud-text-color-primary); }
   .nav-cta {
-    display: inline-block; background: var(--semi-color-primary); color: #16161A;
-    padding: 6px 16px; border-radius: var(--semi-border-radius-small);
+    display: inline-block; background: var(--ud-color-brand-b500); color: #16161A;
+    padding: 6px 16px; border-radius: var(--ud-border-radius-small);
     font-size: 14px; font-weight: 600; text-decoration: none;
     transition: background 0.15s;
   }
-  .nav-cta:hover { background: var(--semi-color-primary-hover); }
+  .nav-cta:hover { background: var(--ud-color-brand-b500-hover); }
   .dark-badge {
     position: fixed; top: 16px; right: 16px; z-index: 200;
-    background: var(--semi-color-text-0); color: var(--semi-color-bg-0);
+    background: var(--ud-text-color-primary); color: var(--ud-color-bg-body);
     font-size: 11px; font-weight: 600; padding: 4px 10px;
-    border-radius: var(--semi-border-radius-medium);
+    border-radius: var(--ud-border-radius-medium);
   }
 
   /* HERO */
   .hero { padding: 80px 32px 64px; text-align: center; }
   .hero h1 {
     font-size: 32px; font-weight: 600; line-height: 44px;
-    color: var(--semi-color-text-0); margin-bottom: 12px;
+    color: var(--ud-text-color-primary); margin-bottom: 12px;
   }
   .hero p {
     font-size: 14px; font-weight: 400; line-height: 22px;
-    color: var(--semi-color-text-1); max-width: 560px; margin: 0 auto 24px;
+    color: var(--ud-text-color-secondary); max-width: 560px; margin: 0 auto 24px;
   }
   .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .btn-primary {
-    display: inline-block; background: var(--semi-color-primary); color: #16161A;
-    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
-    font-family: var(--semi-font); font-size: 14px; font-weight: 600;
+    display: inline-block; background: var(--ud-color-brand-b500); color: #16161A;
+    padding: 8px 20px; border-radius: var(--ud-border-radius-small); border: none;
+    font-family: var(--ud-font); font-size: 14px; font-weight: 600;
     text-decoration: none; cursor: pointer; transition: background 0.15s;
   }
-  .btn-primary:hover { background: var(--semi-color-primary-hover); }
+  .btn-primary:hover { background: var(--ud-color-brand-b500-hover); }
   .btn-tertiary {
-    display: inline-block; background: transparent; color: var(--semi-color-text-0);
-    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
-    font-family: var(--semi-font); font-size: 14px; font-weight: 400;
+    display: inline-block; background: transparent; color: var(--ud-text-color-primary);
+    padding: 8px 20px; border-radius: var(--ud-border-radius-small); border: none;
+    font-family: var(--ud-font); font-size: 14px; font-weight: 400;
     text-decoration: none; cursor: pointer; transition: background 0.15s;
   }
-  .btn-tertiary:hover { background: var(--semi-color-fill-0); }
+  .btn-tertiary:hover { background: var(--ud-color-fill-transparent); }
 
   /* SECTIONS */
   .section { padding: 48px 32px; max-width: 1200px; margin: 0 auto; }
   .section-label {
-    font-size: 12px; font-weight: 600; color: var(--semi-color-text-2);
+    font-size: 12px; font-weight: 600; color: var(--ud-text-color-tertiary);
     text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px;
   }
   .section-title {
     font-size: 24px; font-weight: 600; line-height: 32px; margin-bottom: 24px;
   }
-  .section-divider { border: none; border-top: 1px solid var(--semi-color-border); margin: 0; }
+  .section-divider { border: none; border-top: 1px solid var(--ud-color-line-border); margin: 0; }
 
   /* COLORS */
   .color-grid {
@@ -152,87 +151,87 @@
     gap: 12px; margin-bottom: 20px;
   }
   .color-swatch {
-    border-radius: var(--semi-border-radius-large); overflow: hidden;
-    border: 1px solid var(--semi-color-border);
+    border-radius: var(--ud-border-radius-large); overflow: hidden;
+    border: 1px solid var(--ud-color-line-border);
   }
   .color-swatch-block { height: 72px; width: 100%; }
   .color-swatch-info { padding: 10px 12px; }
   .color-swatch-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
-  .color-swatch-hex { font-size: 12px; color: var(--semi-color-text-2); font-family: monospace; }
-  .color-swatch-role { font-size: 11px; color: var(--semi-color-text-2); margin-top: 3px; }
+  .color-swatch-hex { font-size: 12px; color: var(--ud-text-color-tertiary); font-family: monospace; }
+  .color-swatch-role { font-size: 11px; color: var(--ud-text-color-tertiary); margin-top: 3px; }
   .color-group-label {
-    font-size: 14px; font-weight: 600; color: var(--semi-color-text-1);
+    font-size: 14px; font-weight: 600; color: var(--ud-text-color-secondary);
     margin: 20px 0 10px;
   }
 
   /* TYPOGRAPHY */
   .type-sample {
     margin-bottom: 24px; padding-bottom: 20px;
-    border-bottom: 1px solid var(--semi-color-border);
+    border-bottom: 1px solid var(--ud-color-line-border);
   }
   .type-sample:last-child { border-bottom: none; }
   .type-meta {
-    font-size: 12px; font-weight: 400; color: var(--semi-color-text-2);
+    font-size: 12px; font-weight: 400; color: var(--ud-text-color-tertiary);
     margin-top: 8px; font-family: monospace;
   }
 
   /* BUTTONS */
   .button-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
   .button-item { text-align: center; }
-  .button-label { font-size: 12px; font-weight: 400; color: var(--semi-color-text-2); margin-top: 8px; }
+  .button-label { font-size: 12px; font-weight: 400; color: var(--ud-text-color-tertiary); margin-top: 8px; }
 
   .btn-secondary {
-    display: inline-block; background: var(--semi-color-secondary); color: #16161A;
-    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
-    font-family: var(--semi-font); font-size: 14px; font-weight: 600;
+    display: inline-block; background: var(--ud-color-secondary); color: #16161A;
+    padding: 8px 20px; border-radius: var(--ud-border-radius-small); border: none;
+    font-family: var(--ud-font); font-size: 14px; font-weight: 600;
     text-decoration: none; cursor: pointer;
   }
   .btn-danger {
-    display: inline-block; background: var(--semi-color-danger); color: #16161A;
-    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
-    font-family: var(--semi-font); font-size: 14px; font-weight: 600;
+    display: inline-block; background: var(--ud-color-danger); color: #16161A;
+    padding: 8px 20px; border-radius: var(--ud-border-radius-small); border: none;
+    font-family: var(--ud-font); font-size: 14px; font-weight: 600;
     text-decoration: none; cursor: pointer;
   }
   .btn-warning {
-    display: inline-block; background: var(--semi-color-warning); color: #16161A;
-    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
-    font-family: var(--semi-font); font-size: 14px; font-weight: 600;
+    display: inline-block; background: var(--ud-color-warning); color: #16161A;
+    padding: 8px 20px; border-radius: var(--ud-border-radius-small); border: none;
+    font-family: var(--ud-font); font-size: 14px; font-weight: 600;
     text-decoration: none; cursor: pointer;
   }
   .btn-disabled {
-    display: inline-block; background: var(--semi-color-disabled-bg);
-    color: var(--semi-color-disabled-text);
-    padding: 8px 20px; border-radius: var(--semi-border-radius-small); border: none;
-    font-family: var(--semi-font); font-size: 14px; font-weight: 400;
+    display: inline-block; background: var(--ud-color-disabled-bg);
+    color: var(--ud-text-color-disabled);
+    padding: 8px 20px; border-radius: var(--ud-border-radius-small); border: none;
+    font-family: var(--ud-font); font-size: 14px; font-weight: 400;
     cursor: not-allowed;
   }
   .tag {
     display: inline-block; padding: 2px 8px;
-    border-radius: var(--semi-border-radius-small);
+    border-radius: var(--ud-border-radius-small);
     font-size: 12px; font-weight: 400;
   }
-  .tag-primary { background: rgba(84,169,255,0.15); color: var(--semi-color-primary); }
-  .tag-success { background: rgba(93,194,100,0.15); color: var(--semi-color-success); }
-  .tag-warning { background: rgba(255,174,67,0.15); color: var(--semi-color-warning); }
-  .tag-danger { background: rgba(252,114,90,0.15); color: var(--semi-color-danger); }
+  .tag-primary { background: rgba(84,169,255,0.15); color: var(--ud-color-brand-b500); }
+  .tag-success { background: rgba(93,194,100,0.15); color: var(--ud-color-success); }
+  .tag-warning { background: rgba(255,174,67,0.15); color: var(--ud-color-warning); }
+  .tag-danger { background: rgba(252,114,90,0.15); color: var(--ud-color-danger); }
 
   /* CARDS */
   .card-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;
   }
   .card {
-    background: var(--semi-color-bg-1);
-    border-radius: var(--semi-border-radius-large);
+    background: var(--ud-color-bg-base);
+    border-radius: var(--ud-border-radius-large);
     padding: 20px;
-    border: 1px solid var(--semi-color-border);
+    border: 1px solid var(--ud-color-line-border);
     transition: border-color 0.2s;
   }
   .card:hover { border-color: rgba(255,255,255,0.18); }
   .card h3 { font-size: 18px; font-weight: 600; line-height: 24px; margin-bottom: 8px; }
-  .card p { font-size: 14px; color: var(--semi-color-text-1); line-height: 20px; }
+  .card p { font-size: 14px; color: var(--ud-text-color-secondary); line-height: 20px; }
   .card-badge {
     display: inline-block; font-size: 12px; font-weight: 400;
-    padding: 2px 8px; border-radius: var(--semi-border-radius-small);
+    padding: 2px 8px; border-radius: var(--ud-border-radius-small);
     margin-bottom: 12px;
   }
 
@@ -240,105 +239,105 @@
   .form-group { margin-bottom: 16px; max-width: 400px; }
   .form-label {
     display: block; font-size: 14px; font-weight: 400;
-    color: var(--semi-color-text-0); margin-bottom: 4px;
+    color: var(--ud-text-color-primary); margin-bottom: 4px;
   }
   .form-input {
-    width: 100%; height: 32px; background: var(--semi-color-fill-0);
-    color: var(--semi-color-text-0); border: 1px solid transparent;
-    padding: 0 12px; border-radius: var(--semi-border-radius-small);
-    font-family: var(--semi-font); font-size: 14px; outline: none;
+    width: 100%; height: 32px; background: var(--ud-color-fill-transparent);
+    color: var(--ud-text-color-primary); border: 1px solid transparent;
+    padding: 0 12px; border-radius: var(--ud-border-radius-small);
+    font-family: var(--ud-font); font-size: 14px; outline: none;
     transition: all 0.15s;
   }
-  .form-input:hover { background: var(--semi-color-fill-1); }
+  .form-input:hover { background: var(--ud-color-fill-hover); }
   .form-input:focus {
-    background: var(--semi-color-fill-0);
-    border-color: var(--semi-color-primary);
+    background: var(--ud-color-fill-transparent);
+    border-color: var(--ud-color-brand-b500);
   }
   .form-input--focus {
-    background: var(--semi-color-fill-0);
-    border-color: var(--semi-color-primary);
+    background: var(--ud-color-fill-transparent);
+    border-color: var(--ud-color-brand-b500);
   }
   .form-input--error {
-    background: var(--semi-color-fill-0);
-    border-color: var(--semi-color-danger);
+    background: var(--ud-color-fill-transparent);
+    border-color: var(--ud-color-danger);
   }
   .form-input--disabled {
-    background: var(--semi-color-disabled-bg);
-    color: var(--semi-color-disabled-text);
+    background: var(--ud-color-disabled-bg);
+    color: var(--ud-text-color-disabled);
     cursor: not-allowed;
   }
   .form-textarea {
-    width: 100%; min-height: 80px; background: var(--semi-color-fill-0);
-    color: var(--semi-color-text-0); border: 1px solid transparent;
-    padding: 8px 12px; border-radius: var(--semi-border-radius-small);
-    font-family: var(--semi-font); font-size: 14px; resize: vertical; outline: none;
+    width: 100%; min-height: 80px; background: var(--ud-color-fill-transparent);
+    color: var(--ud-text-color-primary); border: 1px solid transparent;
+    padding: 8px 12px; border-radius: var(--ud-border-radius-small);
+    font-family: var(--ud-font); font-size: 14px; resize: vertical; outline: none;
   }
-  .form-state-label { font-size: 11px; color: var(--semi-color-text-2); margin-top: 4px; }
-  .required-star { color: var(--semi-color-danger); margin-right: 4px; }
+  .form-state-label { font-size: 11px; color: var(--ud-text-color-tertiary); margin-top: 4px; }
+  .required-star { color: var(--ud-color-danger); margin-right: 4px; }
 
   /* TABS */
-  .tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--semi-color-border); margin-bottom: 24px; }
+  .tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--ud-color-line-border); margin-bottom: 24px; }
   .tab-item {
     padding: 8px 0; font-size: 14px; font-weight: 400;
-    color: var(--semi-color-text-2); cursor: pointer;
+    color: var(--ud-text-color-tertiary); cursor: pointer;
     border-bottom: 2px solid transparent; margin-bottom: -1px;
     transition: all 0.15s;
   }
-  .tab-item:hover { color: var(--semi-color-text-0); }
+  .tab-item:hover { color: var(--ud-text-color-primary); }
   .tab-item.active {
-    color: var(--semi-color-primary);
-    border-bottom-color: var(--semi-color-primary);
+    color: var(--ud-color-brand-b500);
+    border-bottom-color: var(--ud-color-brand-b500);
     font-weight: 600;
   }
 
   /* TABLE */
-  .table-wrapper { overflow-x: auto; border-radius: var(--semi-border-radius-large); border: 1px solid var(--semi-color-border); }
+  .table-wrapper { overflow-x: auto; border-radius: var(--ud-border-radius-large); border: 1px solid var(--ud-color-line-border); }
   table { width: 100%; border-collapse: collapse; font-size: 14px; }
   thead th {
-    background: var(--semi-color-fill-0); text-align: left;
+    background: var(--ud-color-fill-transparent); text-align: left;
     padding: 10px 16px; font-weight: 600; font-size: 12px;
-    color: var(--semi-color-text-2); border-bottom: 1px solid var(--semi-color-border);
+    color: var(--ud-text-color-tertiary); border-bottom: 1px solid var(--ud-color-line-border);
   }
   tbody td {
-    padding: 10px 16px; border-bottom: 1px solid var(--semi-color-border);
-    color: var(--semi-color-text-0);
+    padding: 10px 16px; border-bottom: 1px solid var(--ud-color-line-border);
+    color: var(--ud-text-color-primary);
   }
   tbody tr:last-child td { border-bottom: none; }
-  tbody tr:hover { background: var(--semi-color-fill-0); }
+  tbody tr:hover { background: var(--ud-color-fill-transparent); }
 
   /* SPACING */
   .spacing-row { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
   .spacing-item { text-align: center; }
   .spacing-block {
-    background: var(--semi-color-primary); border-radius: 2px;
+    background: var(--ud-color-brand-b500); border-radius: 2px;
     margin-bottom: 6px; height: 24px;
   }
-  .spacing-value { font-size: 11px; font-weight: 500; color: var(--semi-color-text-2); font-family: monospace; }
+  .spacing-value { font-size: 11px; font-weight: 500; color: var(--ud-text-color-tertiary); font-family: monospace; }
 
   /* RADIUS */
   .radius-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
   .radius-item { text-align: center; }
   .radius-box {
-    width: 64px; height: 64px; background: var(--semi-color-primary);
+    width: 64px; height: 64px; background: var(--ud-color-brand-b500);
     margin-bottom: 6px;
   }
-  .radius-label { font-size: 11px; font-weight: 500; color: var(--semi-color-text-2); font-family: monospace; }
-  .radius-context { font-size: 10px; color: var(--semi-color-text-2); }
+  .radius-label { font-size: 11px; font-weight: 500; color: var(--ud-text-color-tertiary); font-family: monospace; }
+  .radius-context { font-size: 10px; color: var(--ud-text-color-tertiary); }
 
   /* ELEVATION */
   .elevation-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
   }
   .elevation-card {
-    background: var(--semi-color-bg-1); border-radius: var(--semi-border-radius-large);
+    background: var(--ud-color-bg-base); border-radius: var(--ud-border-radius-large);
     padding: 20px; text-align: center;
   }
   .elevation-label { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
-  .elevation-desc { font-size: 11px; color: var(--semi-color-text-2); font-family: monospace; }
+  .elevation-desc { font-size: 11px; color: var(--ud-text-color-tertiary); font-family: monospace; }
 
   /* AI SECTION */
   .ai-gradient-bar {
-    height: 48px; border-radius: var(--semi-border-radius-large);
+    height: 48px; border-radius: var(--ud-border-radius-large);
     background: linear-gradient(135deg, #54A9FF, #C375FF, #FF8EB3);
     display: flex; align-items: center; justify-content: center;
     color: #16161A; font-weight: 600; font-size: 14px; margin-bottom: 12px;
@@ -354,10 +353,10 @@
   /* FOOTER */
   .footer {
     padding: 32px; text-align: center;
-    border-top: 1px solid var(--semi-color-border);
-    font-size: 12px; color: var(--semi-color-text-2);
+    border-top: 1px solid var(--ud-color-line-border);
+    font-size: 12px; color: var(--ud-text-color-tertiary);
   }
-  .footer a { color: var(--semi-color-primary); text-decoration: underline; }
+  .footer a { color: var(--ud-color-brand-b500); text-decoration: underline; }
 
   @media (max-width: 768px) {
     .hero h1 { font-size: 24px; line-height: 32px; }
@@ -371,8 +370,8 @@
 
 <nav class="nav">
   <a class="nav-brand" href="#">
-    <span class="nav-brand-icon">S</span>
-    Semi Design
+    <span class="nav-brand-icon">L</span>
+    Lark Design
   </a>
   <ul class="nav-links">
     <li><a href="#colors">Colors</a></li>
@@ -388,8 +387,8 @@
 <div class="dark-badge">Dark Mode</div>
 
 <section class="hero">
-  <h1>Design System<br>Inspired by Feishu</h1>
-  <p>A design token catalog generated from DESIGN.md. Every color, font, component, spacing, and elevation value from Semi Design — visualized in Dark Mode.</p>
+  <h1>Design System<br>Inspired by Lark / UD</h1>
+  <p>A design token catalog generated from DESIGN.md. Every color, font, component, spacing, and elevation value from Lark Design — visualized in Dark Mode.</p>
   <div class="hero-buttons">
     <a class="btn-primary" href="#">Get Started</a>
     <a class="btn-tertiary" href="#">Documentation</a>
@@ -453,8 +452,8 @@
   <div class="type-sample"><div style="font-size:20px; font-weight:600; line-height:28px;">Heading 4 — Card Title</div><div class="type-meta">H4 — 20px / 600 / 28px / Inter</div></div>
   <div class="type-sample"><div style="font-size:18px; font-weight:600; line-height:24px;">Heading 5 — Sub-heading</div><div class="type-meta">H5 — 18px / 600 / 24px / Inter</div></div>
   <div class="type-sample"><div style="font-size:16px; font-weight:600; line-height:22px;">Heading 6 — Small Heading</div><div class="type-meta">H6 — 16px / 600 / 22px / Inter</div></div>
-  <div class="type-sample"><div style="font-size:14px; font-weight:400; line-height:20px;">Body text — Semi Design provides a modern, comprehensive, and flexible design system for enterprise-level applications. Build efficient, professional interfaces with 80+ components.</div><div class="type-meta">Body — 14px / 400 / 20px / Inter</div></div>
-  <div class="type-sample"><div style="font-size:12px; font-weight:400; line-height:16px; color: var(--semi-color-text-1);">Body Small — Labels, secondary text, captions, and metadata</div><div class="type-meta">Body Small — 12px / 400 / 16px / Inter</div></div>
+  <div class="type-sample"><div style="font-size:14px; font-weight:400; line-height:22px;">Body text — Lark provides a modern, comprehensive, and flexible design system for enterprise-level applications. Build efficient, professional interfaces with 80+ components.</div><div class="type-meta">Body — 14px / 400 / 22px / Lark Font</div></div>
+  <div class="type-sample"><div style="font-size:12px; font-weight:400; line-height:16px; color: var(--ud-text-color-secondary);">Body Small — Labels, secondary text, captions, and metadata</div><div class="type-meta">Body Small — 12px / 400 / 16px / Inter</div></div>
 </section>
 
 <hr class="section-divider">
@@ -482,11 +481,11 @@
 
   <h3 style="font-size:16px; font-weight:600; margin: 24px 0 12px;">Avatars</h3>
   <div class="button-row">
-    <div class="button-item"><span class="avatar" style="background:var(--semi-color-primary);">A</span><div class="button-label">Avatar</div></div>
-    <div class="button-item"><span class="avatar" style="background:var(--semi-color-success);">B</span><div class="button-label">Avatar</div></div>
-    <div class="button-item"><span class="avatar" style="background:var(--semi-color-warning);">C</span><div class="button-label">Avatar</div></div>
-    <div class="button-item"><span class="avatar" style="background:var(--semi-color-danger);">D</span><div class="button-label">Avatar</div></div>
-    <div class="button-item"><span class="avatar" style="background:var(--semi-color-ai-purple);">AI</span><div class="button-label">AI Avatar</div></div>
+    <div class="button-item"><span class="avatar" style="background:#54A9FF;">A</span><div class="button-label">Avatar</div></div>
+    <div class="button-item"><span class="avatar" style="background:#5DC264;">B</span><div class="button-label">Avatar</div></div>
+    <div class="button-item"><span class="avatar" style="background:#FFAE43;">C</span><div class="button-label">Avatar</div></div>
+    <div class="button-item"><span class="avatar" style="background:#FC725A;">D</span><div class="button-label">Avatar</div></div>
+    <div class="button-item"><span class="avatar" style="background:var(--ud-color-ai-primary);">AI</span><div class="button-label">AI Avatar</div></div>
   </div>
 </section>
 
@@ -498,17 +497,17 @@
   <h2 class="section-title">Card Examples</h2>
   <div class="card-grid">
     <div class="card">
-      <div class="card-badge" style="background:rgba(84,169,255,0.15); color:var(--semi-color-primary);">Component</div>
+      <div class="card-badge" style="background:rgba(84,169,255,0.15); color:var(--ud-color-brand-b500);">Component</div>
       <h3>80+ Components</h3>
       <p>Up to 80+ high-quality components with stable updates since 2019. Covers inputs, navigation, data display, and feedback.</p>
     </div>
     <div class="card">
-      <div class="card-badge" style="background:rgba(93,194,100,0.15); color:var(--semi-color-success);">Design</div>
+      <div class="card-badge" style="background:rgba(93,194,100,0.15); color:var(--ud-color-success);">Design</div>
       <h3>3000+ Design Tokens</h3>
       <p>Fully customizable via Semi DSM. Define your own design system with one click. Sync between Figma and Code.</p>
     </div>
     <div class="card">
-      <div class="card-badge" style="background:rgba(195,117,255,0.15); color:var(--semi-color-ai-purple);">AI</div>
+      <div class="card-badge" style="background:rgba(195,117,255,0.15); color:var(--ud-color-ai-primary);">AI</div>
       <h3>AI-Friendly Built-in</h3>
       <p>Dedicated AI components and color tokens for AI-powered features. Design to Code in one click via Figma plugin.</p>
     </div>
@@ -527,7 +526,7 @@
     <div class="tab-item">Design Tokens</div>
     <div class="tab-item">Changelog</div>
   </div>
-  <p style="color: var(--semi-color-text-1);">Line-style tabs with 2px bottom border in primary blue for active state. Inactive tabs use tertiary text color.</p>
+  <p style="color: var(--ud-text-color-secondary);">Line-style tabs with 2px bottom border in primary blue for active state. Inactive tabs use tertiary text color.</p>
 </section>
 
 <hr class="section-divider">
@@ -583,25 +582,25 @@
           <td>semi-ui</td>
           <td><span class="tag tag-success">Active</span></td>
           <td>2.4 MB</td>
-          <td style="color: var(--semi-color-text-1);">2026-04-01</td>
+          <td style="color: var(--ud-text-color-secondary);">2026-04-01</td>
         </tr>
         <tr>
           <td>semi-icons</td>
           <td><span class="tag tag-success">Active</span></td>
           <td>640 KB</td>
-          <td style="color: var(--semi-color-text-1);">2026-03-28</td>
+          <td style="color: var(--ud-text-color-secondary);">2026-03-28</td>
         </tr>
         <tr>
           <td>semi-theme-default</td>
           <td><span class="tag tag-primary">Stable</span></td>
           <td>128 KB</td>
-          <td style="color: var(--semi-color-text-1);">2026-03-15</td>
+          <td style="color: var(--ud-text-color-secondary);">2026-03-15</td>
         </tr>
         <tr>
           <td>semi-foundation</td>
           <td><span class="tag tag-warning">Beta</span></td>
           <td>1.1 MB</td>
-          <td style="color: var(--semi-color-text-1);">2026-04-05</td>
+          <td style="color: var(--ud-text-color-secondary);">2026-04-05</td>
         </tr>
       </tbody>
     </table>
@@ -647,19 +646,19 @@
   <div class="section-label">10 / Elevation</div>
   <h2 class="section-title">Elevation & Depth</h2>
   <div class="elevation-grid">
-    <div class="elevation-card" style="border: 1px solid var(--semi-color-border);">
+    <div class="elevation-card" style="border: 1px solid var(--ud-color-line-border);">
       <div class="elevation-label">Level 0: Flat</div>
       <div class="elevation-desc">1px border, no shadow</div>
     </div>
-    <div class="elevation-card" style="box-shadow: var(--semi-shadow-elevated);">
+    <div class="elevation-card" style="box-shadow: var(--ud-shadow-elevated);">
       <div class="elevation-label">Level 1: Elevated</div>
       <div class="elevation-desc">Modals, popovers, toasts</div>
     </div>
-    <div class="elevation-card" style="box-shadow: 0 0 0 2px var(--semi-color-primary);">
+    <div class="elevation-card" style="box-shadow: 0 0 0 2px var(--ud-color-brand-b500);">
       <div class="elevation-label">Focus Ring</div>
       <div class="elevation-desc">Input focus state</div>
     </div>
-    <div class="elevation-card" style="box-shadow: 0 0 0 2px var(--semi-color-danger);">
+    <div class="elevation-card" style="box-shadow: 0 0 0 2px var(--ud-color-danger);">
       <div class="elevation-label">Error Ring</div>
       <div class="elevation-desc">Input error state</div>
     </div>
@@ -667,7 +666,7 @@
 </section>
 
 <footer class="footer">
-  Generated from <a href="https://semi.design/">semi.design</a> DESIGN.md — Feishu Design System Reference (Dark Mode)
+  Generated from DESIGN.md — Lark CSS Specification (Dark Mode)
 </footer>
 
 </body>
