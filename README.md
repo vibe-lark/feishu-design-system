@@ -35,23 +35,23 @@
 ## 参考来源
 
 - 模式参考：`DESIGN.md` 的组织方式参考了 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)
-- 样式参考：整体视觉语言主要参考 [Semi Design 中文站](https://semi.design/zh-CN)
+- 样式参考：整体视觉语言主要参考 Universe Design (UD) 规范
 
 ## 在线预览
 
-- 亮色预览：[https://magic.solutionsuite.cn/html-box/vfZCKoXveaB](https://magic.solutionsuite.cn/html-box/vfZCKoXveaB)
-- 暗色预览：[https://magic.solutionsuite.cn/html-box/vfZCOjCfqkQ](https://magic.solutionsuite.cn/html-box/vfZCOjCfqkQ)
+- 亮色预览：[https://magic.solutionsuite.cn/html-box/vg67pXDMGNG](https://magic.solutionsuite.cn/html-box/vg67pXDMGNG)
+- 暗色预览：[https://magic.solutionsuite.cn/html-box/vg67weFXeIT](https://magic.solutionsuite.cn/html-box/vg67weFXeIT)
 
 ## 截图
 
 ### 亮色预览
 
-[![亮色预览截图](./assets/preview-light.png)](https://magic.solutionsuite.cn/html-box/vfZCKoXveaB)
+[![亮色预览截图](./assets/preview-light.png)](https://magic.solutionsuite.cn/html-box/vg67pXDMGNG)
 
 ### 暗色预览
 
-[![暗色预览截图](./assets/preview-dark.png)](https://magic.solutionsuite.cn/html-box/vfZCOjCfqkQ)
+[![暗色预览截图](./assets/preview-dark.png)](https://magic.solutionsuite.cn/html-box/vg67weFXeIT)
 
 ## 说明
 
-这是一个社区整理的设计系统参考仓库，不是 Semi Design 官方文档。仓库中的样式信息基于公开可见的设计语言、设计 token 和预览页面整理而成，仅用于设计参考与 AI 生成辅助。
+这是一个社区整理的设计系统参考仓库，不是 Universe Design 官方文档。仓库中的样式信息基于公开可见的设计语言、设计 token 和预览页面整理而成，仅用于设计参考与 AI 生成辅助。
